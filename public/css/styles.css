@@ -1,0 +1,142 @@
+body{
+	background: #eef0f3;
+}
+p{
+	margin: 0;
+}
+
+.p1{
+	font-size: 23px;
+	font-weight: 600;
+	margin-left: 20px;
+}
+
+.mainblock{
+	height: 600px;
+	padding: 30px;
+	border-radius: 10px;
+
+}
+
+.avatar{
+	height: 200px;
+	width: 200px;
+	border-radius: 250px;
+	background: #f2f2f2;
+}
+
+.pagename{
+	font-weight: 700;
+	margin-top: 30px;
+	margin-bottom: 20px;
+
+
+}
+
+.likes{
+	font-size: 32px;
+}
+
+.dislikes{
+
+	font-size: 32px;
+}
+
+.likebutton{
+	padding: 0px;
+	border-radius: 20px;
+	background: #e6e8eb;
+	min-width: 100%;
+	cursor: pointer;
+	color: #000;
+	transition: 0.3s linear;
+}
+
+.dislikebutton{
+	padding: 0px;
+	border-radius: 20px;
+	background: #e6e8eb;
+	min-width: 100%;
+	color: #000;
+	cursor: pointer;
+	transition: 0.3s linear;
+}
+
+i{
+	margin: 0;
+	padding: 0;
+}
+
+button{
+	padding: 13px;
+	border-style: none;
+	border-radius: 20px;
+	background: #f1834e;
+	width: 100%;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.3s linear;
+}
+button:hover{
+	background: #e57d49;
+}
+
+textarea{
+	border-style: none;
+	outline: none;
+	width: 100% !important;
+	background: #e6e8eb;
+	padding: 10px 30px;
+	border-bottom: solid 2px #ccc;
+}
+
+input{
+	border-style: none;
+	outline: none;
+	width: 100% !important;
+	background: #e6e8eb;
+	padding: 10px 30px;
+	border-bottom: solid 2px #ccc;
+}
+.formerror{
+	margin-bottom: 20px;
+}
+.chat{
+	height: 70vh;
+	vertical-align: bottom;
+}
+
+.rev{
+	width: 100%;
+	overflow-y: scroll;
+	height: 600px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.rev::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+.rev::-webkit-scrollbar-track {
+}
+ 
+.rev::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 50px;
+  outline: none;
+  width: 2px;
+}
+.nnchat{
+	color: #000;
+	text-decoration: none;
+	font-weight: 600;
+}
+.nnchat:hover{
+	color: #ccc;
+	text-decoration: none;
+	font-weight: 600;
+}
+h1{
+	color: #000;
+}

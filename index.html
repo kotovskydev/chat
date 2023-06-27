@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Чат</title>
+</head>
+<body>
+<form  id="form">
+<input type="text" name="msg" placeholder="Введите сообщение" id="msgi">
+</form>
+<div id="chat">
+	
+</div>
+<script type="text/javascript">
+	var conn = new WebSocket('ws://127.0.0.1:8777');
+	conn.onopen = function(e) {
+
+		conn.send('{"message": "new room", "value": "two"}');	
+	    console.log("Connection established!");
+	};
+
+	conn.onmessage = function(e) {
+	    var json = JSON.parse(e.data);
+	    if (json.message == 'message') {
+	    	var chat = document.getElementById('chat');
+	    	let pFirst = document.createElement('p');
+	    	pFirst.innerHTML = json.value;
+	    	chat.prepend(pFirst);
+	    }
+	};
+	$('#form').submit(function(){
+	  	event.preventDefault();
+	 	var msg = msgi.value;
+		conn.send('{"message": "new message", "value": '+msg+'}');
+	
+	});
+</script>
+	
+
+</body>
+</html>
